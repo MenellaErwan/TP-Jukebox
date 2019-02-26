@@ -8,7 +8,7 @@
 -- Structure de la table `Musique`
 --
 
-CREATE TABLE `Musique` (
+CREATE TABLE `Musique` (a
   `ID` decimal(65,0) NOT NULL,
   `NomMusique` varchar(50) NOT NULL,
   `Genre` varchar(50) NOT NULL,
