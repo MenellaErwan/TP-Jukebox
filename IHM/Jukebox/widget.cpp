@@ -4,6 +4,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
 {
     table = new QTableView();
     c = new Config();
+    x = new Connect();
     boutonConfig = new QPushButton("Config");
     boutonConnect = new QPushButton("Connect");
     boutonRefresh = new QPushButton("Refresh");
@@ -15,6 +16,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     layoutPrincipal->addWidget(boutonRefresh);
     setLayout(layoutPrincipal);
     //signal
+    connect(boutonConnect, SIGNAL(clicked()), this, SLOT(connection()));
     connect(boutonConfig, SIGNAL(clicked()), this, SLOT(config()));
 }
 
@@ -22,6 +24,12 @@ Widget::~Widget()
 {
 
 }
+
+void Widget::connection()
+{
+    x->show();
+}
+
 void Widget::config()
 {
     c->show();

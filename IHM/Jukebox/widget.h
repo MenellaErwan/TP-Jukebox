@@ -6,6 +6,7 @@
 #include <QTableView>
 #include "config.h"
 
+
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -15,10 +16,12 @@ private:
     QPushButton *boutonConnect;
     QPushButton *boutonRefresh;
     Config *c;
+
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
 private slots:
+
     void config();
 };
 

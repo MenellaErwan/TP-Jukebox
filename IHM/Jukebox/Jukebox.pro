@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    config.cpp
+    config.cpp \
+    connect.cpp
 
 HEADERS  += widget.h \
-    config.h
+    config.h \
+    connect.h
 
 FORMS    +=

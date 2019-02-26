@@ -1,5 +1,6 @@
 #include "widget.h"
 #include "config.h"
+#include "connect.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -10,3 +11,4 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
+
