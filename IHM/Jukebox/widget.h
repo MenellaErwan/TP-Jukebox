@@ -5,7 +5,7 @@
 #include <QtGui>
 #include <QTableView>
 #include "config.h"
-
+#include "connect.h"
 
 class Widget : public QWidget
 {
@@ -14,8 +14,8 @@ private:
     QTableView *table;
     QPushButton *boutonConfig;
     QPushButton *boutonConnect;
-    QPushButton *boutonRefresh;
     Config *c;
+    Connect *x;
 
 public:
     explicit Widget(QWidget *parent = 0);
@@ -23,6 +23,7 @@ public:
 private slots:
 
     void config();
+    void connection();
 };
 
 #endif // WIDGET_H

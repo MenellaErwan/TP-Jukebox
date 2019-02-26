@@ -4,9 +4,9 @@ Connect::Connect(QWidget *parent) : QWidget(parent)
 {
     TextCo = new QLabel("test");
     //affichage
-    QVBoxLayout *layoutConfig = new QVBoxLayout;
-    layoutConfig->addWidget(TextCo);
-    setLayout(layoutConfig);
+    QVBoxLayout *layoutConnect = new QVBoxLayout;
+    layoutConnect->addWidget(TextCo);
+    setLayout(layoutConnect);
 }
 
 Connect::~Connect()

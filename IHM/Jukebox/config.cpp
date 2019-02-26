@@ -26,14 +26,14 @@ Config::Config(QWidget *parent) : QWidget(parent)
     layoutConfig->addWidget(OK,4,0);
     setLayout(layoutConfig);
     //signal
-    //connect(OK, SIGNAL(clicked()), this, SLOT(appliquer()));
+    connect(OK, SIGNAL(clicked()), this, SLOT(appliquer()));
 
 }
 
-//void appliquer()
-//{
-
-//}
+void Config::appliquer()
+{
+    this->close();
+}
 
 Config::~Config()
 {

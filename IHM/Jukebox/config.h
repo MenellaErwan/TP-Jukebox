@@ -27,7 +27,7 @@ public:
     explicit Config(QWidget *parent = 0);
     ~Config();
 private slots:
-    //void appliquer();
+    void appliquer();
 
 
 };
