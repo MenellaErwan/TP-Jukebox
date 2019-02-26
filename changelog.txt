@@ -1,0 +1,9 @@
+V1 :
+	interface:
+		-champ où les titre vont apparaitre
+		-fenetre principale
+		-fenetre configuration
+		-bouton connection
+	base de données:
+
+	arduino clavier
