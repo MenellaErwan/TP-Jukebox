@@ -18,7 +18,7 @@ private:
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
-    private slots:
+private slots:
     void config();
 };
 
