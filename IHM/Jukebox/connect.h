@@ -2,21 +2,19 @@
 #define CONNECT_H
 
 #include <QWidget>
-
-namespace Ui {
-class Connect;
-}
+#include <QtGui>
+#include <QLabel>
 
 class Connect : public QWidget
 {
     Q_OBJECT
 
+private:
+    QLabel *TextCo;
+
 public:
     explicit Connect(QWidget *parent = 0);
     ~Connect();
-
-private:
-    Ui::Connect *ui;
 };
 
 #endif // CONNECT_H

@@ -1,14 +1,15 @@
 #include "connect.h"
-#include "ui_connect.h"
 
-Connect::Connect(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Connect)
+Connect::Connect(QWidget *parent) : QWidget(parent)
 {
-    ui->setupUi(this);
+    TextCo = new QLabel("test");
+    //affichage
+    QVBoxLayout *layoutConfig = new QVBoxLayout;
+    layoutConfig->addWidget(TextCo);
+    setLayout(layoutConfig);
 }
 
 Connect::~Connect()
 {
-    delete ui;
+
 }
