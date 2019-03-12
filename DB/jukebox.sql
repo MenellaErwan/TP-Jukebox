@@ -2,8 +2,8 @@
 -- Base de données :  `jukebox`
 --
 
--- --------------------------------------------------------
---création de la base de données 
+-- 
+-- création de la base de données 
 
 CREATE DATABASE jukebox;
 
