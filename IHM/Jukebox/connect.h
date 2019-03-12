@@ -11,10 +11,14 @@ class Connect : public QWidget
 
 private:
     QLabel *TextCo;
+    QPushButton *OK;
 
 public:
     explicit Connect(QWidget *parent = 0);
     ~Connect();
+    void connection(bool status);
+private slots:
+    void quitter();
 };
 
 #endif // CONNECT_H

@@ -15,10 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         widget.cpp \
     config.cpp \
-    connect.cpp
+    connect.cpp \
+    dal.cpp
 
 HEADERS  += widget.h \
     config.h \
-    connect.h
+    connect.h \
+    dal.h
 
 FORMS    +=
+QT += sql
