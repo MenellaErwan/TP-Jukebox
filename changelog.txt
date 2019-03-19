@@ -5,5 +5,12 @@ V1 :
 		-fenetre configuration
 		-bouton connection
 	base de données:
-
-	arduino clavier
+		-Création de la base de données "jukeboxe"
+		-création de la table Musique
+			- IDMusique (identifie les musiques par un numéro)
+			- NomMusique (nom de la musique)
+			- Genre (genre musical)
+			- Artiste (nom de l'artiste)
+			- Durée (durée de la musique)
+			- URL (lien vers le fichier MP3)
+	arduino clavier:
