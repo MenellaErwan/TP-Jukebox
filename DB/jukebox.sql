@@ -14,7 +14,7 @@ CREATE TABLE `Musique` (
   `Durée` time NOT NULL,
   `URL` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-ALTER TABLE `Musique` ADD PRIMARY KEY(`ID`);
+ALTER TABLE `Musique` ADD PRIMARY KEY(`IDMusique`);
 --
 -- Contenu de la table `Musique`
 --
