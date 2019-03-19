@@ -3,36 +3,36 @@
 
 #include <QWidget>
 #include <QtGui>
+#include <QIntValidator>
 #include <QTableView>
 #include <QSqlTableModel>
-#include "config.h"
 #include "connect.h"
 #include "dal.h"
+#include <phonon>
 
 class Widget : public QWidget
 {
     Q_OBJECT
 private:
     QTableView *table;
-    QPushButton *boutonConfig;
-    QPushButton *boutonConnect;
-    Config *c;
-    Connect *x;
     QString data[10];
     DAL *db;
     QPushButton *boutonplay;
     QLineEdit *formID;
+    Connect *c;
     int ID;
+    Phonon::MediaObject *media;
+
 
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
     void refresh();
-    int play(int ID);
-private slots:
-
-    void config();
     void connection();
+private slots:
+    void play();
+
+
 };
 
 #endif // WIDGET_H

@@ -22,10 +22,16 @@ int DAL::connection()
     return status;
 }
 
-int DAL::Geturl(int ID)
+QString DAL::Geturl(int ID)
 {
-    QSqlQuery query("SELECT URL FROM Musique WHERE ID ="+ID);
-    QString url = query.value(0).toString();
-    //qDebug("%s",url);
-    return  1;
+    QSqlQuery query;
+    query.prepare("SELECT URL FROM Musique WHERE IDMusique = :ID");
+    query.bindValue(":ID",ID);
+    query.exec();
+    while(query.next())
+    {
+        url = query.value(0).toString();
+    }
+    //qDebug()<<url<<endl;
+    return  url;
 }

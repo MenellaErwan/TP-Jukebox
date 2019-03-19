@@ -2,7 +2,7 @@
 
 Connect::Connect(QWidget *parent) : QWidget(parent)
 {
-    TextCo = new QLabel("Connection en cours ...");
+    TextCo = new QLabel("Connection echouer");
     OK = new QPushButton("OK");
     //affichage
     QVBoxLayout *layoutConnect = new QVBoxLayout;
@@ -22,14 +22,3 @@ void Connect::quitter()
     this->close();
 }
 
-void Connect::connection(bool status)
-{
-       if(status == true)
-       {
-           TextCo->setText("Connection Reussi");
-       }
-       else
-       {
-           TextCo->setText("Connection échoué");
-       }
-}

@@ -4,22 +4,19 @@
 Widget::Widget(QWidget *parent) : QWidget(parent)
 {
     table = new QTableView();
-    c = new Config();
-    boutonConfig = new QPushButton("Config");
-    boutonConnect = new QPushButton("Connect");
     boutonplay = new QPushButton("Play");
     formID = new QLineEdit();
+    formID->setValidator(new QIntValidator(1,10,this));
     //affichage
     QVBoxLayout *layoutPrincipal = new QVBoxLayout;
     layoutPrincipal->addWidget(table);
-    //layoutPrincipal->addWidget(boutonConfig);
-    layoutPrincipal->addWidget(boutonConnect);
     layoutPrincipal->addWidget(boutonplay);
     layoutPrincipal->addWidget(formID);
     setLayout(layoutPrincipal);
+    c = new Connect;
+    connection();
     //signal
-    connect(boutonConnect, SIGNAL(clicked()), this, SLOT(connection()));
-    connect(boutonConfig, SIGNAL(clicked()), this, SLOT(config()));
+    connect(boutonplay,SIGNAL(clicked()), this, SLOT(play()));
 }
 
 Widget::~Widget()
@@ -32,16 +29,13 @@ void Widget::connection()
 
     db = new DAL();
     bool status = db->connection();
-    x = new Connect();
-    x->connection(status);
-    x->show();
+    if (status == false)
+    {
+        c->show();
+    }
     refresh();
 }
 
-void Widget::config()
-{
-    c->show();
-}
 
 void Widget::refresh()
 {
@@ -58,9 +52,14 @@ void Widget::refresh()
      table->show();
 }
 
-/*int Widget::play(int ID)
+void Widget::play()
 {
+    QString ID = formID->text();
+    int intID = ID.toInt();
+    QString url = db->Geturl(intID);
+    media = Phonon::createPlayer(Phonon::MusicCategory,Phonon::MediaSource(url));
+    media->play();
 
-    return 0;
+
+
 }
-*/

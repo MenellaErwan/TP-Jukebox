@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += sql
+QT += phonon
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,14 +16,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    config.cpp \
     connect.cpp \
     dal.cpp
 
 HEADERS  += widget.h \
-    config.h \
     connect.h \
     dal.h
 
 FORMS    +=
-QT += sql
+

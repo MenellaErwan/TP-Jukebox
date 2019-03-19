@@ -16,7 +16,6 @@ private:
 public:
     explicit Connect(QWidget *parent = 0);
     ~Connect();
-    void connection(bool status);
 private slots:
     void quitter();
 };
