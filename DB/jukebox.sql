@@ -8,11 +8,11 @@ CREATE DATABASE jukebox;
 USE jukebox;
 CREATE TABLE `Musique` (
   `IDMusique` decimal(65,0) NOT NULL,
-  `NomMusique` varchar(50) NOT NULL,
-  `Genre` varchar(50) NOT NULL,
-  `Artiste` varchar(50) NOT NULL,
+  `NomMusique` varchar(500) NOT NULL,
+  `Genre` varchar(500) NOT NULL,
+  `Artiste` varchar(500) NOT NULL,
   `Durée` time NOT NULL,
-  `URL` varchar(100) NOT NULL
+  `URL` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ALTER TABLE `Musique` ADD PRIMARY KEY(`ID`);
 --
