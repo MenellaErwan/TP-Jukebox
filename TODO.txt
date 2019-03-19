@@ -1,4 +1,4 @@
--Conception d'une IHM
+-Faire l'UML
 -Traitement des données sur IHM
 -Connexion les deux module bluetooth
 -développer l'intergration entre IHM et L'arduino
