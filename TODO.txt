@@ -1,3 +1,2 @@
-- intégrer le clavier à Qt
-- remplir la base de données avec des fichiers mp3
-- faire jouer un fichier mp3 avec qt
+- intégrer le clavier à l' IHM
+- faire jouer un fichier mp3 avec l' IHM
