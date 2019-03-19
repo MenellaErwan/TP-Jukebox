@@ -2,4 +2,4 @@
 -Traitement des données sur IHM
 -Connexion les deux module bluetooth
 -développer l'intergration entre IHM et L'arduino
--Tester le systemeTester le systeme
+-Tester le systeme
