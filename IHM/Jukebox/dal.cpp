@@ -19,8 +19,15 @@ int DAL::connection()
     data.setUserName("root");
     data.setPassword("password");
     bool status = data.open();
+    /*if (localDevice.isValid())
+    {
+        localDevice.powerOn();
+        localDevice.setHostMode(QBluetoothLocalDevice::HostDiscoverable);
+
+    }*/
     return status;
 }
+
 
 QString DAL::Geturl(int ID)
 {

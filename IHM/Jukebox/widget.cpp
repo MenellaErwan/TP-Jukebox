@@ -14,6 +14,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     layoutPrincipal->addWidget(formID);
     setLayout(layoutPrincipal);
     c = new Connect;
+    media = Phonon::createPlayer(Phonon::MusicCategory,Phonon::MediaSource());
     connection();
     //signal
     connect(boutonplay,SIGNAL(clicked()), this, SLOT(play()));
@@ -54,10 +55,11 @@ void Widget::refresh()
 
 void Widget::play()
 {
+    media->stop();
     QString ID = formID->text();
     int intID = ID.toInt();
     QString url = db->Geturl(intID);
-    media = Phonon::createPlayer(Phonon::MusicCategory,Phonon::MediaSource(url));
+    media->setCurrentSource(url);
     media->play();
 
 

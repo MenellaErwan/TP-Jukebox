@@ -2,6 +2,7 @@
 #define DAL_H
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QtBluetooth>
 #include <QSqlTableModel>
 #include <QSqlQueryModel>
 #include <QDebug>
@@ -15,6 +16,7 @@ class DAL
         int connection();
         QString Geturl(int ID);
         QSqlDatabase data;
+        QBluetoothLocalDevice localDevice;
     private:
         QString url;
 };
