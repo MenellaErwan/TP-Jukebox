@@ -2,6 +2,9 @@
 #define CONNECT_H
 
 #include <QWidget>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QLineEdit>
 #include <QtGui>
 #include <QLabel>
 

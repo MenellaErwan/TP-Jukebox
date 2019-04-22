@@ -3,12 +3,16 @@
 
 #include <QWidget>
 #include <QtGui>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QtMultimedia>
+#include <QLineEdit>
 #include <QIntValidator>
 #include <QTableView>
 #include <QSqlTableModel>
 #include "connect.h"
 #include "dal.h"
-#include <phonon>
+
 
 class Widget : public QWidget
 {
@@ -21,7 +25,7 @@ private:
     QLineEdit *formID;
     Connect *c;
     int ID;
-    Phonon::MediaObject *media;
+    QMediaPlayer *media;
 
 
 public:

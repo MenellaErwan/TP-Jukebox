@@ -6,10 +6,10 @@
 
 QT += core gui
 QT += sql
-QT += phonon
 QT += bluetooth
+QT += multimedia
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += widgets
 
 TARGET = Jukebox
 TEMPLATE = app
