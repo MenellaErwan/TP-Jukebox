@@ -63,6 +63,4 @@ void Widget::play()
     media->setVolume(100);
     media->play();
 
-
-
 }
