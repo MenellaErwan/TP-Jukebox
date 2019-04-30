@@ -33,6 +33,8 @@ public:
     ~Widget();
     void refresh();
     void connection();
+    void pause();
+    void stop();
 private slots:
     void play();
 

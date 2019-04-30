@@ -15,6 +15,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     setLayout(layoutPrincipal);
     c = new Connect;
     media = new QMediaPlayer;
+    media->setVolume(50);
     connection();
     //signal
     connect(boutonplay,SIGNAL(clicked()), this, SLOT(play()));
@@ -48,8 +49,8 @@ void Widget::refresh()
      model->setHeaderData(3, Qt::Horizontal, QObject::tr("Artiste"));
      model->setHeaderData(4, Qt::Horizontal, QObject::tr("Durée"));
      table->setModel(model);
-     table->hideColumn(2);
-     table->hideColumn(5);
+     table->hideColumn(0);
+     //table->hideColumn(5);
      table->show();
 }
 
@@ -60,7 +61,15 @@ void Widget::play()
     int intID = ID.toInt();
     QString url = db->Geturl(intID);
     media->setMedia(QUrl::fromLocalFile(url));
-    media->setVolume(100);
     media->play();
 
+}
+
+void Widget::stop()
+{
+    media->stop();
+}
+void Widget::pause()
+{
+    media->pause();
 }

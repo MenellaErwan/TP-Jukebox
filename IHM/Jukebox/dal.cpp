@@ -30,6 +30,6 @@ QString DAL::Geturl(int ID)
     {
         url = query.value(0).toString();
     }
-    qDebug()<<url<<endl;
+    //qDebug()<<url<<endl;
     return  url;
 }
