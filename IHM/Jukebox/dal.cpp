@@ -4,6 +4,8 @@ using namespace std;
 DAL::DAL()
 {
 
+connection();
+
 }
 
 DAL::~DAL()

@@ -1,6 +1,5 @@
-#ifndef WIDGET_H
-#define WIDGET_H
-
+#ifndef JUKEBOX_H
+#define JUKEBOX_H
 #include <QWidget>
 #include <QtGui>
 #include <QPushButton>
@@ -10,35 +9,42 @@
 #include <QIntValidator>
 #include <QTableView>
 #include <QSqlTableModel>
-#include "connect.h"
+#include <QSerialPort>
+#include <QSerialPortInfo>
+#include <QComboBox>
+#include <QDebug>
+#include <QAbstractAudioDeviceInfo>
 #include "dal.h"
 
-
-class Widget : public QWidget
+using namespace std;
+class Jukebox : public QWidget
 {
     Q_OBJECT
 private:
     QTableView *table;
-    QString data[10];
-    DAL *db;
     QPushButton *boutonplay;
     QLineEdit *formID;
-    Connect *c;
     int ID;
+    DAL *db;
     QMediaPlayer *media;
-
+    QComboBox *serialinformation;
+    QSerialPort *Serial;
+    QByteArray donnees;
 
 public:
-    explicit Widget(QWidget *parent = 0);
-    ~Widget();
+    explicit Jukebox(QWidget *parent = 0);
+    ~Jukebox();
     void refresh();
     void connection();
     void pause();
     void stop();
+    int commande(QString data);
 private slots:
     void play();
+    void setport();
+    void recevoir();
 
 
 };
 
-#endif // WIDGET_H
+#endif // JUKEBOX_H
