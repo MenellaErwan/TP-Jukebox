@@ -1,0 +1,10 @@
+debug/main.o
+debug/modifier.o
+debug/widget.o
+debug/connect.o
+debug/dal.o
+debug/window.o
+debug/moc_widget.o
+debug/moc_connect.o
+debug/moc_modifier.o
+debug/moc_window.o

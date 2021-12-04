@@ -1,12 +1,12 @@
-#include "widget.h"
-#include "connect.h"
+#include "jukebox.h"
+#include "window.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Widget w;
-    w.setFixedSize(600,500);
+    window w;
+    //w.setFixedSize(600,450);
     w.show();
 
     return a.exec();

@@ -1,0 +1,10 @@
+release/main.o
+release/modifier.o
+release/widget.o
+release/connect.o
+release/dal.o
+release/window.o
+release/moc_widget.o
+release/moc_connect.o
+release/moc_modifier.o
+release/moc_window.o

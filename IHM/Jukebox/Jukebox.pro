@@ -6,23 +6,27 @@
 
 QT += core gui
 QT += sql
-QT += phonon
 QT += bluetooth
+QT += multimedia
+QT += serialport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += widgets
 
 TARGET = Jukebox
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        widget.cpp \
-    connect.cpp \
-    dal.cpp
+    jukebox.cpp \
+    modifier.cpp \
+    dal.cpp \
+    window.cpp
 
-HEADERS  += widget.h \
-    connect.h \
-    dal.h
+HEADERS  += \
+    dal.h \
+    jukebox.h \
+    modifier.h \
+    window.h
 
 FORMS    +=
 

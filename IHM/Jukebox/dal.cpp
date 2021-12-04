@@ -4,6 +4,8 @@ using namespace std;
 DAL::DAL()
 {
 
+connection();
+
 }
 
 DAL::~DAL()
@@ -13,18 +15,9 @@ DAL::~DAL()
 
 int DAL::connection()
 {
-    data = QSqlDatabase::addDatabase("QMYSQL");
-    data.setHostName("localhost");
-    data.setDatabaseName("jukebox");
-    data.setUserName("root");
-    data.setPassword("password");
+    data = QSqlDatabase::addDatabase("QSQLITE");
+    data.setDatabaseName("jukebox.sqlite");
     bool status = data.open();
-    /*if (localDevice.isValid())
-    {
-        localDevice.powerOn();
-        localDevice.setHostMode(QBluetoothLocalDevice::HostDiscoverable);
-
-    }*/
     return status;
 }
 
